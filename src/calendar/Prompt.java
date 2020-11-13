@@ -14,13 +14,14 @@ public class Prompt{
 			System.out.println("달을 입력하세요");
 			System.out.print(PROMPT);
 			month = sc.nextInt();
-			cal.printSampleCalendar();
-			if (month <= 0) {
+			if (month <= 0 || month>=13) {
 				break;
+			}else {
+				cal.printCalendar(2017,month);
 			}
-			if (month>12) {
-				continue;
-			}
+//			if (month>12) {
+//				continue;
+//			}
 		}
 		sc.close();
 		System.out.println("bye~");
