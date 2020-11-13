@@ -12,7 +12,7 @@ public class Calendar_2 extends Calendar{
 		System.out.println("월을 입력하세요");
 		for (int i = 0; i < repeat; i++) {
 			int month = sc.nextInt();
-			System.out.printf("%d월은 %d월까지 있습니다",month,cal.getmaxDaysOfMonth(month));
+			System.out.printf("%d월은 %d월까지 있습니다",month,cal.getmaxDaysOfMonth(month, month));
 		}
 		sc.close();
 		
