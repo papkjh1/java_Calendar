@@ -14,7 +14,7 @@ public class Calendar_2 extends Calendar{
 			int month = sc.nextInt();
 			System.out.printf("%d월은 %d월까지 있습니다",month,cal.getmaxDaysOfMonth(month));
 		}
-		
+		sc.close();
 		
 		
 	}
