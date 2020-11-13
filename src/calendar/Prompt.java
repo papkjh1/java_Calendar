@@ -2,10 +2,10 @@ package calendar;
 
 import java.util.Scanner;
 
-public class Calendar_3 extends Calendar_2 {
-
-	public static void main(String[] args) {
-		String PROMPT = "cal> ";
+public class Prompt{
+	private final static String PROMPT="cal> ";
+	
+	public void runPrompt() {
 		Calendar cal = new Calendar();
 		Scanner sc = new Scanner(System.in);
 
@@ -14,13 +14,22 @@ public class Calendar_3 extends Calendar_2 {
 			System.out.println("달을 입력하세요");
 			System.out.print(PROMPT);
 			month = sc.nextInt();
-			System.out.printf("%d달은 %d월까지 있습니다", month, cal.getmaxDaysOfMonth(month));
-			if (month <= 0 && month>12) {
+			cal.printSampleCalendar();
+			if (month <= 0) {
 				break;
+			}
+			if (month>12) {
+				continue;
 			}
 		}
 		sc.close();
 		System.out.println("bye~");
+
+	}
+	
+	public static void main(String[] args) {
+		Prompt p = new Prompt();
+		p.runPrompt();
 	}
 
 }
