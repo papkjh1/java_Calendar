@@ -11,7 +11,6 @@ public class Prompt extends Calendar{
 
 		int month = 0;
 		int year = 0;
-		String WEEKDAY;
 		while (true) {
 			System.out.println();
 			System.out.println("년도를 입력하세요");
@@ -21,11 +20,12 @@ public class Prompt extends Calendar{
 			System.out.print("MONTH> ");
 			month = sc.nextInt();
 			System.out.println("첫번째 요일을 선택하세요.(SU,MO,WE.TH.FR.SA)");
-			WEEKDAY=sc.next();
+			String weekday = sc.next();
+			cal.weekDays(weekday);
 			if (month <= 0 || month>=13) {
 				break;
 			}else {
-				cal.printCalendar(year,month,WEEKDAY);
+				cal.printCalendar(year,month);
 			}
 //			if (month>12) {
 //				continue;
